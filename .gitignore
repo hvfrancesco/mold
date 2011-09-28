@@ -14,6 +14,7 @@
 CVS/
 .svn/
 
+bin/libs/
 bin/leaf
 bin/leaf_debug
 obj/*
