@@ -3,8 +3,8 @@
 void Bud::setup(float x, float y, list<Bud> * buds)
 {
     dead = false;
-    velocity = 2.0;
-    splitChance = 0.1;
+    velocity = 1.2;
+    splitChance = 0.5;
     listBuds = buds;
     minDelta = 0.5;
 
@@ -46,56 +46,69 @@ void Bud::randomGenerate(ofVec2f center, float radius, list<Bud> * buds)
 
 void Bud::update()
 {
-    if (!dead) {
-    if (associatedOrmons.size()>0) {
-    // check if we must split a new bud
-    float splitCheck;
-    splitCheck = ofRandom(0,1);
-    if (splitCheck < splitChance) {
-        Bud newBud;
-        newBud.setup(position.x, position.y, listBuds);
-        //newBud.associatedOrmons = associatedOrmons;
-        listBuds->push_back(newBud);
-    }
-}
-
-    ofVec2f directionSum;
-    // finds vector to associated ormons
-
-    for (list<Ormon>::iterator oi = associatedOrmons.begin(); oi != associatedOrmons.end(); oi++)
+    if (!dead)
     {
-        Ormon * o = &*oi;
-        if (!o->dead){
-            directionSum = directionSum + (o->position - position);
+        if (associatedOrmons.size()>0)
+        {
+            // check if we must split a new bud
+            float splitCheck;
+            splitCheck = ofRandom(0,1);
+            if (splitCheck < splitChance)
+            {
+                Bud newBud;
+                newBud.setup(position.x, position.y, listBuds);
+                //newBud.associatedOrmons = associatedOrmons;
+                listBuds->push_back(newBud);
+            }
+
+
+            ofVec2f directionSum;
+            // finds vector to associated ormons
+
+            for (list<Ormon>::iterator oi = associatedOrmons.begin(); oi != associatedOrmons.end(); oi++)
+            {
+                Ormon * o = &*oi;
+                if (!o->dead)
+                {
+                    directionSum = directionSum + (o->position - position);
+                }
+            }
+            directionSum.normalize();
+            ofVec2f displacement = directionSum*velocity;
+            if (displacement.length() > minDelta)
+            {
+                positions.push_back(position);
+            }
+            position += displacement;
         }
-    }
-    directionSum.normalize();
-    ofVec2f displacement = directionSum*velocity;
-    if (displacement.length() > minDelta)
-    {
-        positions.push_back(position);
-    }
-    position += displacement;
+
+        else
+        {
+            dead = true;
+        }
     }
 }
 
 void Bud::draw()
 {
     // draws bud trails
-    /*
+    ///*
     for (list<ofVec2f>::iterator pi = positions.begin(); pi != positions.end(); pi++)
     {
         ofVec2f prevPos = *pi;
-        ofSetHexColor(0x000000);
+        ofEnableAlphaBlending();
+        ofSetColor(255,255,255,255);
         ofFill();
-        ofCircle(prevPos.x, prevPos.y, 2);
+        ofCircle(prevPos.x, prevPos.y, 0.5);
         ofNoFill();
+        ofDisableAlphaBlending();
     }
-    */
+    //*/
     //ofSetPolyMode(OF_POLY_WINDING_NONZERO);
     //ofSetColor(51,119,0,255);
-    ofSetLineWidth(2.5);
-    ofSetColor(0,0,0,100);
+    /*
+    ofSetLineWidth(1);
+    ofSetColor(255,255,255,255);
     ofEnableAlphaBlending();
     ofBeginShape();
     for (list<ofVec2f>::iterator pi = positions.begin(); pi != positions.end(); pi++)
@@ -107,13 +120,17 @@ void Bud::draw()
     ofSetLineWidth(1);
     ofDisableAlphaBlending();
 
+    */
+
     // draws bud
+    /*
     ofEnableAlphaBlending();
-    ofSetColor(152,25,0,100);
+    ofSetColor(255,255,255,128);
     ofFill();
-    ofCircle(position.x, position.y, 2);
+    ofCircle(position.x, position.y, 1);
     ofNoFill();
     ofDisableAlphaBlending();
+    */
 
 }
 
@@ -125,7 +142,8 @@ void Bud::drawLinks()
     for (list<Ormon>::iterator oi = associatedOrmons.begin(); oi != associatedOrmons.end(); oi++)
     {
         Ormon * o = &*oi;
-        if (!o->dead){
+        if (!o->dead)
+        {
             ofLine(position.x,position.y,o->position.x,o->position.y);
         }
     }

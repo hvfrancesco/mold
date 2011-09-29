@@ -29,17 +29,25 @@ void Ormon::update()
 void Ormon::draw()
 {
     if (!dead) {
-        ofSetColor(255,208,0,200);
+        ofSetColor(255,255,255);
+        /*
+        ofFill();
+        ofEnableAlphaBlending();
+        ofCircle(position.x, position.y, 1);
+        ofDisableAlphaBlending();
+        ofNoFill();
+        */
     }
     else {
-        //ofSetColor(204,255,102,200);
-        //fSetColor(198,204,210,127);
-        ofSetColor(107,143,184,60);
+        ofSetColor(20,20,20);
+        /*
+        ofFill();
+        ofEnableAlphaBlending();
+        ofCircle(position.x, position.y, 1);
+        ofDisableAlphaBlending();
+        ofNoFill();
+        */
     }
-    ofFill();
-    ofEnableAlphaBlending();
-    ofCircle(position.x, position.y, 1.5);
-    ofDisableAlphaBlending();
-    ofNoFill();
+
 
 }

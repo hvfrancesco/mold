@@ -24,6 +24,7 @@ class testApp : public ofBaseApp{
 		void gotMessage(ofMessage msg);
 
         void associateBud(Ormon * o);
+        void snapshot();
 
 		int deadIterations;
 
@@ -48,6 +49,26 @@ class testApp : public ofBaseApp{
 
         bool bBackground;
         bool bRecord;
+        bool bGui;
+        bool bGo;
 
+        int camWidth;
+        int camHeight;
+        ofVideoGrabber cam;
+        ofTexture camTexture;
+        unsigned char * pixels;
+        unsigned char * snapPixels;
+
+        float darkThreshold;
+        float brightThreshold;
+
+        ofTrueTypeFont ttf;
+
+        // gui elements
+        bool showGui;
+        void openImageFile();
+        void openVideoFile();
+        bool bImageLoad;
+        bool bVideoLoad;
 
 };

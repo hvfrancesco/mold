@@ -246,7 +246,29 @@ obj/x86_64Debug/./src/testApp.d obj/x86_64Debug/./src/testApp.o: \
  ../../../libs/openFrameworks/video/ofVideoPlayer.h \
  ../../../libs/openFrameworks/video/ofGstVideoPlayer.h \
  ../../../libs/openFrameworks/3d/ofCamera.h \
- ../../../libs/openFrameworks/3d/ofEasyCam.h src/bud.h src/ormon.h
+ ../../../libs/openFrameworks/3d/ofEasyCam.h src/bud.h src/ormon.h \
+ ../../../addons/ofxSimpleGuiToo/src/ofxSimpleGuiToo.h \
+ ../../../addons/ofxXmlSettings/src/ofxXmlSettings.h \
+ ../../../addons/ofxXmlSettings/libs/tinyxml.h \
+ ../../../addons/ofxSimpleGuiToo/src/ofxSimpleGuiIncludes.h \
+ ../../../addons/ofxSimpleGuiToo/src/ofxSimpleGuiPage.h \
+ ../../../addons/ofxSimpleGuiToo/src/ofxSimpleGuiConfig.h \
+ ../../../addons/ofxSimpleGuiToo/src/Controls/ofxSimpleGuiButton.h \
+ ../../../addons/ofxSimpleGuiToo/src/ofxSimpleGuiValueControl.h \
+ ../../../addons/ofxSimpleGuiToo/src/ofxSimpleGuiControl.h \
+ ../../../addons/ofxMSAInteractiveObject/src/ofxMSAInteractiveObject.h \
+ ../../../addons/ofxSimpleGuiToo/src/Controls/ofxSimpleGuiContent.h \
+ ../../../addons/ofxSimpleGuiToo/src/Controls/ofxSimpleGuiFPSCounter.h \
+ ../../../addons/ofxSimpleGuiToo/src/Controls/ofxSimpleGuiQuadWarp.h \
+ ../../../addons/ofxSimpleGuiToo/src/Controls/ofxSimpleGuiSliderFloat.h \
+ ../../../addons/ofxSimpleGuiToo/src/Controls/ofxSimpleGuiSliderBase.h \
+ ../../../addons/ofxSimpleGuiToo/src/Controls/ofxSimpleGuiSliderInt.h \
+ ../../../addons/ofxSimpleGuiToo/src/Controls/ofxSimpleGuiSlider2d.h \
+ ../../../addons/ofxSimpleGuiToo/src/Controls/ofxSimpleGuiMovieSlider.h \
+ ../../../addons/ofxSimpleGuiToo/src/Controls/ofxSimpleGuiToggle.h \
+ ../../../addons/ofxSimpleGuiToo/src/Controls/ofxSimpleGuiTitle.h \
+ ../../../addons/ofxSimpleGuiToo/src/Controls/ofxSimpleGuiColorPicker.h \
+ ../../../addons/ofxSimpleGuiToo/src/Controls/ofxSimpleGuiComboBox.h
 
 src/testApp.h:
 
@@ -795,3 +817,47 @@ src/testApp.h:
 src/bud.h:
 
 src/ormon.h:
+
+../../../addons/ofxSimpleGuiToo/src/ofxSimpleGuiToo.h:
+
+../../../addons/ofxXmlSettings/src/ofxXmlSettings.h:
+
+../../../addons/ofxXmlSettings/libs/tinyxml.h:
+
+../../../addons/ofxSimpleGuiToo/src/ofxSimpleGuiIncludes.h:
+
+../../../addons/ofxSimpleGuiToo/src/ofxSimpleGuiPage.h:
+
+../../../addons/ofxSimpleGuiToo/src/ofxSimpleGuiConfig.h:
+
+../../../addons/ofxSimpleGuiToo/src/Controls/ofxSimpleGuiButton.h:
+
+../../../addons/ofxSimpleGuiToo/src/ofxSimpleGuiValueControl.h:
+
+../../../addons/ofxSimpleGuiToo/src/ofxSimpleGuiControl.h:
+
+../../../addons/ofxMSAInteractiveObject/src/ofxMSAInteractiveObject.h:
+
+../../../addons/ofxSimpleGuiToo/src/Controls/ofxSimpleGuiContent.h:
+
+../../../addons/ofxSimpleGuiToo/src/Controls/ofxSimpleGuiFPSCounter.h:
+
+../../../addons/ofxSimpleGuiToo/src/Controls/ofxSimpleGuiQuadWarp.h:
+
+../../../addons/ofxSimpleGuiToo/src/Controls/ofxSimpleGuiSliderFloat.h:
+
+../../../addons/ofxSimpleGuiToo/src/Controls/ofxSimpleGuiSliderBase.h:
+
+../../../addons/ofxSimpleGuiToo/src/Controls/ofxSimpleGuiSliderInt.h:
+
+../../../addons/ofxSimpleGuiToo/src/Controls/ofxSimpleGuiSlider2d.h:
+
+../../../addons/ofxSimpleGuiToo/src/Controls/ofxSimpleGuiMovieSlider.h:
+
+../../../addons/ofxSimpleGuiToo/src/Controls/ofxSimpleGuiToggle.h:
+
+../../../addons/ofxSimpleGuiToo/src/Controls/ofxSimpleGuiTitle.h:
+
+../../../addons/ofxSimpleGuiToo/src/Controls/ofxSimpleGuiColorPicker.h:
+
+../../../addons/ofxSimpleGuiToo/src/Controls/ofxSimpleGuiComboBox.h:
